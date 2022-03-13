@@ -1,0 +1,55 @@
+@media (max-width: 935px){
+
+
+.topo{
+    width: 100%;
+}
+.body{
+    z-index: 15;
+}
+.conteudotopo{
+    width: 100%;
+}
+.opçoes img{
+    height: 22px;
+    margin: 16px 20px 16px 0;
+}
+.opçoes ion-icon{
+    margin: 16px 20px 16px 0;
+}
+.logosdesktop{
+    margin-left: 20px;
+}
+
+.main{
+    width: 614px;
+}
+
+
+/* .retangulostories{
+    background-color: #bd1616;
+    width: 29px;
+    height: 118px;
+    position: absolute;
+    top: 0;
+    left: 614px;
+    z-index: 5;
+
+}  */
+
+.espaçamento{
+    display: none;
+}
+.sidebar{
+    display: none;
+}
+.rodape{
+    display: none;
+}
+
+
+
+
+
+
+}
