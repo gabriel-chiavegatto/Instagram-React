@@ -33,28 +33,16 @@ const postagens = [
             quemComentou: "strange",
             oQueComentou: "Domingão relaxado"
         }]
-    },
-    {
-        fotoDePerfil: "./imgs/logo-animalplanet.jpg",
-        nomeDePerfil: "animalplanet",
-        fotoPostada: "./imgs/video.mp4",
-        comentarios: [{
-            quemComentou: "animalplanet",
-            oQueComentou: "O mundo animal tem uns bixo interessante"
-        },
-        {
-            quemComentou: "strange",
-            oQueComentou: "fazem parceria?"
-        }]
-    },
+    }
 ]
 
 export default function Post() {
     return (
         postagens.map(post => {
             return (
-                <div className="post">
-                    <div className="usuario">
+
+        <div className="post">
+            <div className="usuario">
                         <img src={post.fotoDePerfil} alt="foto de perfil"></img>
                         <p><strong>{post.nomeDePerfil}</strong></p>
                         <div className="etc">
