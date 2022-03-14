@@ -1,6 +1,9 @@
 body{
     background: #E5E5E5;
 }
+/* .root{
+    width: 100%;
+} */
 p{
     font-family: Roboto;
     font-style: normal;
@@ -15,7 +18,6 @@ ion-icon{
 .topo
 {
     background-color: #FFFFFF;
-    ;
     height: 54px;
     position: fixed;
     top: 0;
