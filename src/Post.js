@@ -39,24 +39,23 @@
 export default function Post() {
     return (
         <>
-        <div className="post">
-            <DadosDoPost fotoDePerfil="./imgs/gatobranco.png" nomeDePerfil="cindy" fotoPostada="./imgs/gato-telefone 1.png" />
-            <Comentarios quemComentou="cindy" oQueComentou="Quer saber como ganhar wiskas grátis? Arrasta pra cima bb" />
-            <Comentarios quemComentou="yellow 2" oQueComentou="oi sumida" />
-            <AddComentario />
-        </div>
-        <div className="post">
-            <DadosDoPost fotoDePerfil="./imgs/gatobranco.png" nomeDePerfil="cindy" fotoPostada="./imgs/gato-telefone 1.png" />
-            <Comentarios quemComentou="ciclano" oQueComentou="ta rolando" />
-            <Comentarios quemComentou="ciclano 2" oQueComentou="ta rolando 2" />
-            <AddComentario />
-        </div>
-        <div className="post">
-            <DadosDoPost fotoDePerfil="./imgs/gatobranco.png" nomeDePerfil="cindy" fotoPostada="./imgs/gato-telefone 1.png" />
-            <Comentarios quemComentou="ciclano" oQueComentou="ta rolando" />
-            <Comentarios quemComentou="ciclano 2" oQueComentou="ta rolando 2" />
-            <AddComentario />
-        </div>
+            <div className="post">
+                <DadosDoPost fotoDePerfil="./imgs/gatobranco.png" nomeDePerfil="cindy" fotoPostada="./imgs/gato-telefone 1.png" />
+                <Comentarios quemComentou="cindy" oQueComentou="Quer saber como ganhar wiskas grátis? Arrasta pra cima bb" />
+                <Comentarios quemComentou="yellow 2" oQueComentou="oi sumida" />
+                <AddComentario />
+            </div>
+            <div className="post">
+                <DadosDoPost fotoDePerfil="./imgs/persa.jpg" nomeDePerfil="zeus" fotoPostada="./imgs/gato-cinema.jpg" />
+                <Comentarios quemComentou="zeus" oQueComentou="Cineminha com a gata" />
+                <Comentarios quemComentou="cindy 2" oQueComentou="lindos" />
+                <AddComentario />
+            </div>
+            <div className="post">
+                <DadosDoPost fotoDePerfil="./imgs/nathanwpylestrangeplanet 1.png" nomeDePerfil="strange" fotoPostada="./imgs/gatostrange.jpg" />
+                <Comentarios quemComentou="strange" oQueComentou="Domingão relaxado" />
+                <AddComentario />
+            </div>
 
 
         </>
