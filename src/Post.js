@@ -1,26 +1,56 @@
 
 export default function Post() {
+
+    const cadaPost = [
+        {
+            fotoDePerfil: "./imgs/gatobranco.png",
+            nomeDePerfil: "cindy",
+            fotoPostada: "./imgs/gato-telefone 1.png",
+            comentarios: [{
+                quemComentou: "cindy",
+                oQueComentou: "Quer saber como ganhar wiskas grátis? Arrasta pra cima bb"
+            },
+            {
+                quemComentou: "yellow",
+                oQueComentou: "oi sumida"
+            }]
+        },
+        {
+            fotoDePerfil: "./imgs/persa.jpg",
+            nomeDePerfil: "zeus",
+            fotoPostada: "./imgs/gato-cinema.jpg",
+            comentarios: [{
+                quemComentou: "zeus",
+                oQueComentou: "Cineminha com a gata"
+            },
+            {
+                quemComentou: "cindy",
+                oQueComentou: "lindos"
+            }]
+        },
+        {
+            fotoDePerfil: "./imgs/nathanwpylestrangeplanet 1.png",
+            nomeDePerfil: "strange",
+            fotoPostada: "./imgs/gatostrange.jpg",
+            comentarios: [{
+                quemComentou: "strange",
+                oQueComentou: "Domingão relaxado"
+            }]
+        }
+    ];
+
     return (
         <>
-            <div className="post">
-                <DadosDoPost fotoDePerfil="./imgs/gatobranco.png" nomeDePerfil="cindy" fotoPostada="./imgs/gato-telefone 1.png" />
-                <Comentarios quemComentou="cindy" oQueComentou="Quer saber como ganhar wiskas grátis? Arrasta pra cima bb" />
-                <Comentarios quemComentou="yellow 2" oQueComentou="oi sumida" />
-                <AddComentario />
-            </div>
-            <div className="post">
-                <DadosDoPost fotoDePerfil="./imgs/persa.jpg" nomeDePerfil="zeus" fotoPostada="./imgs/gato-cinema.jpg" />
-                <Comentarios quemComentou="zeus" oQueComentou="Cineminha com a gata" />
-                <Comentarios quemComentou="cindy 2" oQueComentou="lindos" />
-                <AddComentario />
-            </div>
-            <div className="post">
-                <DadosDoPost fotoDePerfil="./imgs/nathanwpylestrangeplanet 1.png" nomeDePerfil="strange" fotoPostada="./imgs/gatostrange.jpg" />
-                <Comentarios quemComentou="strange" oQueComentou="Domingão relaxado" />
-                <AddComentario />
-            </div>
-
-
+            {cadaPost.map(post => {
+                return (
+                    <div className="post" key={post.fotoPostada}>
+                        <DadosDoPost fotoDePerfil={post.fotoDePerfil} nomeDePerfil={post.nomeDePerfil} fotoPostada={post.fotoPostada}/>
+                        {post.comentarios.map(comentario =>
+                            <Comentarios quemComentou={comentario.quemComentou} oQueComentou={comentario.oQueComentou} key={comentario.quemComentou} />
+                        )}
+                        <AddComentario />
+                    </div>)
+            })}
         </>
     )
 }
