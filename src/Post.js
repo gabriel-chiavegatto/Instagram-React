@@ -1,4 +1,4 @@
-
+import React from "react";
 export default function Post() {
 
     const cadaPost = [
@@ -44,7 +44,7 @@ export default function Post() {
             {cadaPost.map(post => {
                 return (
                     <div className="post" key={post.fotoPostada}>
-                        <DadosDoPost fotoDePerfil={post.fotoDePerfil} nomeDePerfil={post.nomeDePerfil} fotoPostada={post.fotoPostada}/>
+                        <DadosDoPost fotoDePerfil={post.fotoDePerfil} nomeDePerfil={post.nomeDePerfil} fotoPostada={post.fotoPostada} />
                         {post.comentarios.map(comentario =>
                             <Comentarios quemComentou={comentario.quemComentou} oQueComentou={comentario.oQueComentou} key={comentario.quemComentou} />
                         )}
@@ -56,6 +56,9 @@ export default function Post() {
 }
 
 function DadosDoPost(props) {
+
+    const [like, setLike] = React.useState(<ion-icon name="heart-outline"></ion-icon>)
+
     return (
         <>
             <div className="usuario">
@@ -70,7 +73,12 @@ function DadosDoPost(props) {
             </div>
             <div className="interacao">
                 <div className="interacaoesquerda">
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <span onClick={() => {
+                        (like.props.name === "heart") ?
+                            setLike(<ion-icon name="heart-outline"></ion-icon>)
+                            : setLike(<ion-icon name="heart" style={{ color: 'red' }}></ion-icon>)
+                    }}>
+                        {like}</span>
                     <img src="./imgs/compass-outline 1.png" alt="comentar foto"></img>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
@@ -86,6 +94,7 @@ function DadosDoPost(props) {
         </>
     )
 }
+
 
 function Comentarios(props) {
     return (
@@ -108,5 +117,3 @@ function AddComentario() {
         </div>
     )
 }
-
-
