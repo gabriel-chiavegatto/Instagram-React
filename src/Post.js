@@ -69,7 +69,9 @@ function DadosDoPost(props) {
                 </div>
             </div>
             <div className="foto">
-                <img src={props.fotoPostada} alt="foto postada"></img>
+                <img src={props.fotoPostada} alt="foto postada"
+                    onClick={() => setLike(<ion-icon name="heart" style={{ color: 'red' }}></ion-icon>)}>
+                </img>
             </div>
             <div className="interacao">
                 <div className="interacaoesquerda">
